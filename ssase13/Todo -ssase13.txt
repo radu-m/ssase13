@@ -1,0 +1,91 @@
+------------------------------------------------------------------------------------------------------------------------
+							small shit
+------------------------------------------------------------------------------------------------------------------------
+
+front page :
+		
+	
+	
+			
+	capitcal:
+		 "User not found"
+	text
+		Tilføj Titel i top med "Middle-Earth Dating"			 
+		Capital letters på knappen med
+		Navigate to partners data	
+
+			Skift "protected versus sql injection" til 
+			"The wizards working on middle-earth dating knows that your privacy is important, 
+			whether you are an evil warlord wanting your real identity to be kept a secret, 
+			or a dwarf afraid that people will know that you’re interested in elves. 
+			Therefore this site uses magical state of the art security that is potentially unbreachable!"
+
+
+profile: 
+	Capital:
+		Hugs Recieved
+		Friend Requests
+		Friend List
+		Interest List
+		Add New Interest
+		Search For User
+		Go to interest page
+		Remove interest page
+		Go to friend profile
+		Remove friend
+
+friend profile:
+	Capital:
+		Friend List
+		Interest List
+		Go to friend profile
+	
+Interest:
+	Capital:
+		Go to profile
+
+
+------------------------------------------------------------------------------------------------------------------------
+							real shit
+------------------------------------------------------------------------------------------------------------------------
+	
+
+	
+	
+	
+
+
+	
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+							fixed:
+------------------------------------------------------------------------------------------------------------------------
+Friend profile:
+	
+	Buttons:
+		Go to friend profile on interests
+		Nothing happens
+		
+
+Profile:
+	Want to be admin???						request it in person, bitch
+	
+
+search:	
+	Search for user logget ind som Breakout søger efter blah giver stacktrace error.
+
+myprofile.
+	Når interest bliver addet kommer der også en interest 0: som alle virker til at være medlem af?
+
+login
+	Password: Length minimum 6 og skal include capital letter og number	(node) capital letter hard :( number done, same for 														minimum.
+									
+	Ved succes redirect tilbage til Login				navigation (no idea what's wrong)
+
+interest: 
+	Button:
+		Nothing happens
+
+
