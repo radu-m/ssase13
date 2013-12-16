@@ -117,11 +117,14 @@ public class Register {
                
                 message = addNewProfile(loginid,password,name,address);
                 
-                log.info(message);
+                log.info("registered user " + name);
                 return message;
             }
-            else
-            return "fail";
+            else{
+                 log.info("user failed to register");
+                return "fail";
+                
+            }
         }
         return "fail";
         

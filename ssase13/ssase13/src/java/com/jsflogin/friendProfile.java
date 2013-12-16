@@ -87,6 +87,8 @@ public class friendProfile {
        myName = getNameByID(friendID);
        myAdress = getAdressByID(friendID);
        getListOfHasInterests(friendID);
+       String myOwnName = getNameByID(myOwnID);
+       log.info(myOwnName + " is checking out  friends profile: "+myName);
        
        getListOfFriends(friendID);
        
@@ -378,6 +380,33 @@ public class friendProfile {
 
             }
         return myIDgetIDUserName;
+        
+    }
+    public void goToSendHug(){
+        sendHug(myOwnID,friendID);
+    }
+    public void sendHug(int myID, int recievingID){
+        try{
+       //   Class.forName(javaSQLDriverPath);
+          Connection conn=(Connection)DriverManager.getConnection(ConnectionPath,ConnectionUser,ConnectionPW);  
+       
+            
+            PreparedStatement inserter = (PreparedStatement) conn.prepareStatement("INSERT INTO Hugs(PersonID1,PersonID2) VALUES(?,?)");
+            inserter.setInt(1,myID);
+            inserter.setInt(2,recievingID);
+            
+            
+            inserter.executeUpdate();;
+             conn.close();
+            inserter.close();
+            log.info("sent hug from id" +myID + " to id:"+recievingID );
+            }
+        
+            catch(Exception e){
+                
+            log.info(e.getMessage());
+
+        }
         
     }
     

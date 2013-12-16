@@ -79,6 +79,7 @@ public class SearchByName {
        resultList = searchForNames(searchedName); 
        String myUserName = (String) session.getAttribute("myLoggedInUserName");
        myOwnID = getIDByUserName(myUserName);
+       log.info("searched for users named "+searchedName);
         // session.setAttribute("searchByName", searchForUserByName);
     }
     public ArrayList<NameWithID> searchForNames(String searchedFor){

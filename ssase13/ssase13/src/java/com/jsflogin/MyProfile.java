@@ -132,7 +132,7 @@ public  class MyProfile {
        getListOfHugNames();
        getListOfFriends();
        getListOfFriendRequests();
-       
+       log.info(myName + "  accessed his own profile");
        
     }
 
@@ -482,7 +482,7 @@ public  class MyProfile {
             String newInterestName = newInterest;
             boolean test = testValidInput(newInterestName);
              if(!test){
-               
+               log.info("user: " +myName+  "added bad input for interest");
              }else{
                 try{
                   Class.forName(javaSQLDriverPath);
@@ -497,6 +497,7 @@ public  class MyProfile {
                      conn.close();
                     inserter.close();
                     interestList.add(newInterestName);
+                    log.info("user: "+myName + " added interest" + newInterestName);
                     }
 
                     catch(Exception e){
@@ -610,7 +611,7 @@ public  class MyProfile {
             inserter.executeUpdate();
             conn.close();
             inserter.close();
-            
+            log.info("ID:"+ myID + " accepted friend request from " + personID);
             }
             catch(Exception e){
                     log.info(e.getMessage());
@@ -635,6 +636,7 @@ public  class MyProfile {
             inserter.executeUpdate();
              conn.close();
             inserter.close();
+              log.info("ID:"+ myID + " removed friend request from " + removingID);
             }
         
             catch(Exception e){
@@ -697,6 +699,7 @@ public  class MyProfile {
     public void goToRemoveInterest(){
         
         removeFromHasInterestTable(interestsAndPointers.get(interestPointer).stringName);
+          log.info("ID:"+ myID + " removed interest " + interestsAndPointers.get(interestPointer).stringName);
         interestList.remove(interestPointer);
         refreshPage();
         
@@ -741,6 +744,7 @@ public  class MyProfile {
     public String navigateToInterestProfile(){
       
         String profileName = interestList.get(interestPointer);
+        log.info("id: "+myID + " navigated to "+profileName);
          HttpSession session = (HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(true);        
        session.setAttribute("myInterestProfileName", profileName);        
         return "success";    

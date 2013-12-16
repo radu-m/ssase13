@@ -30,6 +30,8 @@
             <h2>Name: <h:outputText value="#{friendProfile.myName}"/></h2>
             <h3>Address: <h:outputText  value="#{friendProfile.myAdress}"/></h3>
              
+            <c:out value="send hug"/><h:commandButton value ="send hug" action="#{friendProfilegoToSendHug}"/>
+            
             <c:out value="friend list"/><p>    
                 <h:dataTable id="thisfriendTable" value="#{friendProfile.friendList}" var = "orly">
                 <h:column>

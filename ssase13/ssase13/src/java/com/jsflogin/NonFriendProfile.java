@@ -125,6 +125,7 @@ public class NonFriendProfile {
             inserter.executeUpdate();;
              conn.close();
             inserter.close();
+            log.info("id: "+myOwnID+ " requested friendship with " + friendID);
             }
         
             catch(Exception e){
@@ -152,6 +153,8 @@ public class NonFriendProfile {
        friendID= Integer.parseInt(session.getAttribute("nonFriendIDSession").toString());  
        myOwnID= Integer.parseInt(session.getAttribute("myLoggedInID").toString());
        myName = getNameByID(friendID);
+       String myOwnName = getNameByID(myOwnID);
+       log.info(myOwnName + " is checking out non friends profile: "+myName);
        getListOfHasInterests(friendID);
     //   FriendRequestStatus = checkFriendRequestStatus();
        newFriendRequestStatus = checkFriendRequestStatus();

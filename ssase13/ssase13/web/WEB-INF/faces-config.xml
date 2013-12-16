@@ -74,7 +74,7 @@
         <navigation-case>
             <from-action>#{Register.registerUser}</from-action>
             <from-outcome>fail</from-outcome>
-            <to-view-id>/Fail.jsp</to-view-id>
+            <to-view-id>/fail.jsp</to-view-id>
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
