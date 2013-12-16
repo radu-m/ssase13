@@ -37,7 +37,7 @@
                     <h:outputText value="#{orly.pointer}"/>
                     <h:outputText value=": "/>
                     <h:outputText value="#{orly.myName}"/>
-                    <h:commandButton value="accept request" action="#{MyProfile.acceptHug}">
+                    <h:commandButton value="accept hug" action="#{MyProfile.acceptHug}">
                         <f:setPropertyActionListener target ="#{MyProfile.hugPointer}" value = "#{orly.pointer}"/>
                     </h:commandButton>
                 </h:column>

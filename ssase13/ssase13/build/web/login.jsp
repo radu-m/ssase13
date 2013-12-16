@@ -41,9 +41,15 @@
            <p><p>
                
            </p>
-            
-           <c:out value="protected versus sql injection"></c:out><p>
-               
+           <c:out value=" The site is protected against the following security threats:"></c:out><p>
+           <c:out value="-SQL Injectio"></c:out><p>
+           <c:out value="- Command Injection"></c:out><p>
+           <c:out value="- Man in the Middle Attacks"></c:out><p>
+           <c:out value="- XSS"></c:out><p>
+           <c:out value="- Magic URLs and Forged Cookies"></c:out><p>
+           <c:out value="- Information Leakage"></c:out><p>
+           <c:out value="- Weak Passwords"></c:out><p>
+          
         </h:form>
         <h:form  >
              <h:commandButton value="navigate to partners data" action="#{JsfLogin.navigatePartners}"/>

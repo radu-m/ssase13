@@ -379,6 +379,7 @@ public  class MyProfile {
            
              conn.close();
             inserter.close();
+            log.info("id: "+myID + " accepted hug from " +removingID);
             }
         
             catch(Exception e){                
